@@ -6,7 +6,7 @@ Este projeto faz parte de um experimento acadêmico para avaliar esforço de com
 Você recebeu a versão do sistema implementada com **arquitetura em camadas**.
 
 ## Sua tarefa
-1. Identificar a arquitetura usada no projeto.
+1. Identificar a arquitetura usada no projeto. - Arquitetura limpa
 2. Justificar com base na estrutura do código.
 3. Identificar a classe que deve ser alterada
 4. Implementar a feature de cálculo de descontos no carrinho.
