@@ -10,6 +10,10 @@ jobs:
   continuous-integration:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: marketplace
+
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
@@ -21,17 +25,14 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      # 🔹 Build + testes
+      # 🔹 Build (com testes)
       - name: Build + Testes Unitários
         run: mvn clean install
-        working-directory: marketplace
 
-      # 🔹 Testes unitários
+      # 🔹 Testes unitários isolados
       - name: Executar Testes Unitários
         run: mvn test
-        working-directory: marketplace
 
       # 🔹 Testes de arquitetura
       - name: Executar Testes de Arquitetura
-        run: mvn test -Dtest=ArchitectureTest
-        working-directory: marketplace
+        run: mvn test -Dtest=ArquiteturaTest
